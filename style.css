@@ -1,0 +1,69 @@
+body {
+  background: #ffe8df;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 100px;
+  line-height: 1;
+}
+#win{
+  margin: 30px;
+  line-height: 1;
+  font-size: 30px;
+  color: #4cd3c2;
+}
+.game {
+  width: 800px;
+  height: 400px;
+  display:flex;
+  flex-wrap:wrap;
+  margin:10px auto;
+
+}
+
+.hole{
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after{
+  display:block;
+  background: url("dirt.png") bottom center no-repeat;
+  background-size:contain;
+  content: '';
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('ani.png') bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.hole.up .mole{
+  top:0;
+}
+
+button{
+  width:150px;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  margin: 20px 10px 0px 10px;
+}
